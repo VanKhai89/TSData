@@ -17,4 +17,12 @@ function PL.onLogined(player)
     end
 end
 
+function PL.onLogout(player)
+    print("Player " .. player.Id .. " has logged out...")
+end
+
+function PL.onChangeQuest(player, questId, status)
+    print("Player " .. player.Id .. " has changed quest " .. questId .. " to status " .. status)
+end
+
 return PL
