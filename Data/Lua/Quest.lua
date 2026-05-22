@@ -1,7 +1,10 @@
 local Quest = {}
 
-function Quest.onChangeQuest(event, player, questId)
-    print("Player " .. player.Id .. " has changed quest " .. questId .. " to status " .. event.status)
+function Quest.onChangedQuest(player, questId, step)
+    if questId == 10401 then
+        -- Tiến vào giang đông
+        return { questId = questId, name = "inc_all" }
+    end
 end
 
 return Quest
